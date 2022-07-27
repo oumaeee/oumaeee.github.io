@@ -4,27 +4,31 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Library</title>
 </head>
 <body>
     <div class="wrapper">
         <div class="add-book">
             <h1>add book</h1>
-            <div class="input-container">
-                <input type="text" id="title" class="text-input" autocomplete="off" placeholder="Enter book title" required>
-                <label for="title" class="label">Title</label>
+            <div class="input-text-container">
+                <div class="input-container">
+                    <input type="text" id="title" class="text-input" autocomplete="off" placeholder="Enter book title" required>
+                    <label for="title" class="label">Title</label>
+                </div>
+                <div class="input-container">
+                    <input type="text" id="publisher" class="text-input" autocomplete="off" placeholder="Enter book publisher" required>
+                    <label for="publisher" class="label">Publisher</label>
+                </div>
+                <div class="input-container">
+                    <input type="text" id="year" class="text-input" autocomplete="off" placeholder="Enter book year" required>
+                    <label for="year" class="label">year</label>
+                </div>
             </div>
-            <div class="input-container">
-                <input type="text" id="publisher" class="text-input" autocomplete="off" placeholder="Enter book publisher" required>
-                <label for="publisher" class="label">Publisher</label>
+            <div class="submit-btn-container">
+                <input type="submit" value="Submit as unread">
+                <button>t</button>
             </div>
-            <div class="input-container">
-                <input type="text" id="year" class="text-input" autocomplete="off" placeholder="Enter book year" required>
-                <label for="year" class="label">year</label>
-            </div>
-
-            <button type="submit"><span class="submit-text"></span></button>
-            <button></button>
         </div>
         <div class="book-container">
             <div class="search-bar">
