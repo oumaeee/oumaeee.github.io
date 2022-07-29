@@ -33,6 +33,7 @@ h1{
     align-items: center;
     position: sticky;
     top: 200px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
 }
 
 /* input text */
@@ -45,8 +46,6 @@ h1{
 .input-container{
     position: relative;
     width: 280px;
-    
-    
 }
 .text-input{
     width: 100%;
@@ -94,6 +93,76 @@ h1{
 .text-input:focus::placeholder{
     opacity: 1;
 }
+/* sumbit btn */
+.submit-btn-container{
+    display: flex;
+    justify-content: space-between;
+    width: 250px;
+}
+.submit-btn{
+    width: 200px;
+    height: 35px;
+    border-radius: 10px;
+    font-size: 18px;
+    background-color: #876445;
+    box-shadow: 0 5px  #876445;
+    transition: all .3s ease;
+    position: relative;
+}
+.submit-btn:hover{
+    box-shadow: 0 3px  #876445;
+    top: 1px;
+}
+.submit-btn:active{
+    box-shadow: 0 0 #876445;
+    top: 5px;
+}
+.submit-btn-readed{
+    color: #ecb6a5;
+    border: 3px solid #E09983;
+}
+
+.submit-btn-unread{
+    color: #C1AF8B;
+    border: 3px solid #C1AF8B;
+}
+
+.change-btn{
+    font-size: 16px;
+    display: grid;
+    place-items: center;
+    border: 3px solid #876445;
+    color: #876445;
+    width: 30px;
+    height: 30px;
+    border-radius: 10px;
+    transition: all .3s ease;
+    position: relative;
+}
+.change-btn-readed{
+    background-color: #ecb6a5;
+    box-shadow: 0 5px #ecb6a5, 0 5px 0 1px #876445;
+}
+.change-btn-readed:hover{
+    box-shadow: 0 3px #ecb6a5;
+    top: 1px;
+}
+.change-btn-readed:active{
+    box-shadow: 0 0px #ecb6a5;
+    top: 5px;
+}
+.change-btn-unread{
+    background-color: #C1AF8B;
+    box-shadow: 0 5px #C1AF8B;
+}
+.change-btn-unread:hover{
+    box-shadow: 0 3px #C1AF8B;
+    top: 1px;
+}
+.change-btn-unread:active{
+    box-shadow: 0 0px #C1AF8B;
+    top: 5px;
+}
 /* book list */
 .book-container{
     width: 900px;
@@ -114,6 +183,7 @@ h1{
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
 }
 .search{
     height: 40px;
@@ -130,10 +200,27 @@ h1{
 .filled{
     border: 3px solid #876445;
 }
-.submit-btn{
-    width: 150px;
+.search-btn{
+    font-size: 16px;
+    display: grid;
+    place-items: center;
+    background-color: #876445;
+    border: 3px solid #C1AF8B;
+    color: #C1AF8B;
+    width: 40px;
     height: 40px;
-    background-color: rgb(77, 102, 246);
+    border-radius: 10px;
+    box-shadow: 0 5px  #876445;
+    transition: all .3s ease;
+    position: relative;
+}
+.search-btn:hover{
+    box-shadow: 0 3px  #876445;
+    top: 1px;
+}
+.search-btn:active{
+    box-shadow: 0 0 #876445;
+    top: 5px;
 }
 /* unread book */
 .unread-book{
@@ -145,6 +232,7 @@ h1{
     border: 3px solid #876445;
     border-radius: 10px;
     text-align: center;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
 }
 /* readed book */
 .readed-book{
@@ -156,5 +244,6 @@ h1{
     border: 3px solid #876445;
     border-radius: 10px;
     text-align: center;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
 }
 
