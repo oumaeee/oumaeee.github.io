@@ -34,6 +34,66 @@ h1{
     position: sticky;
     top: 200px;
 }
+
+/* input text */
+.input-list-container{
+    height: 130px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+.input-container{
+    position: relative;
+    width: 280px;
+    
+    
+}
+.text-input{
+    width: 100%;
+    height: 100%;
+    border: 3px solid rgb(227, 161, 38);
+    border-radius: 5px;
+    outline: none;
+    font-size: 16px;
+    transition: all 0.3s;
+    padding: 5px;
+}
+.label{
+    position: absolute;
+    z-index: 2;
+    left: 10px;
+    top: 7px;
+    transition: all 0.2s;
+    padding: 0 2px;
+    color: rgb(92, 92, 92);
+    font-size: 16px;
+}
+.label::before{
+    content: " ";
+    border-top: 3px solid white;
+    position: absolute;
+    width: 100%;
+    top: 10px;
+    left: 0;
+    z-index: -1;
+}
+
+.text-input:focus{
+    border: 3px solid #876445;
+}
+.text-input:focus + .label, .filled + .label{
+    top: -10px;
+    color: #69421f;
+    font-size: 14px;
+}
+.text-input::placeholder{
+    font-size: 14px;
+    opacity: 0;
+    transition: all 0.3s;
+}
+.text-input:focus::placeholder{
+    opacity: 1;
+}
 /* book list */
 .book-container{
     width: 900px;
@@ -59,8 +119,21 @@ h1{
     height: 40px;
     width: 600px;
     border-radius: 10px;
-    border: 3px solid #876445;
+    border: 3px solid rgb(227, 161, 38);
     font-size: 18px;
+    outline: none;
+    padding: 5px;
+}
+.search:focus{
+    border: 3px solid #876445;
+}
+.filled{
+    border: 3px solid #876445;
+}
+.submit-btn{
+    width: 150px;
+    height: 40px;
+    background-color: rgb(77, 102, 246);
 }
 /* unread book */
 .unread-book{
