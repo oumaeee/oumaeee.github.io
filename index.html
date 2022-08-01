@@ -12,36 +12,41 @@
     <div class="wrapper">
         <div class="add-book">
             <h1>add book</h1>
-            <div class="input-list-container">
-                <div class="input-container">
-                    <input type="text" id="title" class="text-input" autocomplete="off" placeholder="Enter book title" required>
-                    <label for="title" class="label">Title</label>
+            <form id="submit" class="form" action="#">
+                <div class="input-list-container">
+                    <div class="input-container">
+                        <input type="text" id="title" class="text-input" autocomplete="off" placeholder="Enter book title" required>
+                        <label for="title" class="label">Title</label>
+                    </div>
+                    <div class="input-container">
+                        <input type="text" id="publisher" class="text-input" autocomplete="off" placeholder="Enter book publisher" required>
+                        <label for="publisher" class="label">Publisher</label>
+                    </div>
+                    <div class="input-container">
+                        <input type="text" id="year" class="text-input" autocomplete="off" placeholder="Enter book year" required>
+                        <label for="year" class="label">Year</label>
+                    </div>
                 </div>
-                <div class="input-container">
-                    <input type="text" id="publisher" class="text-input" autocomplete="off" placeholder="Enter book publisher" required>
-                    <label for="publisher" class="label">Publisher</label>
+                <div class="submit-btn-container ">
+                    <input type="submit" value="Submit as unread" id="submit-btn" class="submit-btn submit-btn-unread">
+                    <div class="change-btn change-btn-unread" id="change"><i class="fa-solid fa-book"></i></div>
                 </div>
-                <div class="input-container">
-                    <input type="text" id="year" class="text-input" autocomplete="off" placeholder="Enter book year" required>
-                    <label for="year" class="label">Year</label>
-                </div>
-            </div>
-            <div class="submit-btn-container ">
-                <input type="submit" value="Submit as unread" id="submit" class="submit-btn submit-btn-unread">
-                <div class="change-btn change-btn-unread" id="change"><i class="fa-solid fa-book"></i></div>
-            </div>
+            </form>
         </div>
         <div class="book-container">
             <div class="search-bar">
                 <input type="text" id="search" class="search" placeholder="Search book title">
-                <div class="search-btn"><i class="fa-solid fa-magnifying-glass"></i></div>
+                <div class="search-btn" id="search-btn"><i class="fa-solid fa-magnifying-glass"></i></div>
             </div>
             <div class="unread-book">
                 <h1>unread book</h1>
-                
+                <div class="unread-book-container mark">
+                    
+                </div>
             </div>
             <div class="readed-book">
                 <h1>readed book</h1>
+                <div class="readed-book-container mark"></div>
             </div>
         </div>
     </div>
