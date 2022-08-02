@@ -163,11 +163,15 @@ function makeBook(bookObject) {
 const render = new Event('render');
 document.addEventListener('render', function(){
     document.dispatchEvent(setWebStorage);
+    renderBook(library)
+});
+
+function renderBook(e) {
     const unreadBookContainer = document.querySelector('.unread-book-container');
     unreadBookContainer.innerHTML = '';
     const readedBookContainer = document.querySelector('.readed-book-container');
     readedBookContainer.innerHTML = '';
-    for (const book of library) {
+    for (const book of e) {
         const bookElement = makeBook(book);
         if(book.readed == false){
             unreadBookContainer.appendChild(bookElement);
@@ -176,8 +180,7 @@ document.addEventListener('render', function(){
         }
     };
     
-});
-
+}
 // fungsi event delete dan change
 function del(id) {
     const bookTarget = findId(id);
@@ -206,6 +209,27 @@ function findId(id){
     return -1
 };
 
+
+// search
+searchBtn.addEventListener('click', event => {
+    searchBook()
+    
+});
+searchInput.addEventListener('keyup', event => {
+    if ( event.keyCode === 13){
+        searchBook();
+    };
+});
+function searchBook(){
+    const libraryFiltered = []
+    const searchValue = searchInput.value.toLowerCase();
+    for (const book of library) {
+        if(book.title.toLowerCase().includes(searchValue)){
+            libraryFiltered.push(book);
+        }
+    };
+    renderBook(libraryFiltered);
+};
 
 
 
