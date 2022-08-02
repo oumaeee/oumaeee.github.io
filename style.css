@@ -105,8 +105,8 @@ i{
 /* sumbit btn */
 .submit-btn-container{
     display: flex;
-    justify-content: space-between;
-    width: 250px;
+    justify-content: space-evenly;
+    width: auto;
 }
 .submit-btn{
     width: 200px;

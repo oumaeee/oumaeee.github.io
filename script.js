@@ -29,10 +29,26 @@ const searchBtn = document.getElementById('search-btn');
 
 let library = [];
 
-
 document.addEventListener('DOMContentLoaded', function () {
-    
+    if(typeof(Storage) === 'undefined') {
+        alert(`Browzer anda tidak support web storage!
+        Browzer anda tidak akan menyimpan data jika tab atau browzer ditutup`);
+    } else {
+        if(sessionStorage.getItem('library') === null){
+            sessionStorage.setItem('libray', JSON.stringify( library));
+        } else{
+        const getLibrary = sessionStorage.getItem('library');
+        library = JSON.parse(getLibrary);
+        document.dispatchEvent(render);
+        };
+    }
 });
+
+const setWebStorage = new Event('setWebStorage')
+document.addEventListener('setWebStorage', function() {
+    sessionStorage.setItem('library', JSON.stringify( library));
+})
+
 // change
 let readed = false;
 changeBtn.addEventListener('click', (e) => {
@@ -146,6 +162,7 @@ function makeBook(bookObject) {
 // menampilkan ke halaman web
 const render = new Event('render');
 document.addEventListener('render', function(){
+    document.dispatchEvent(setWebStorage);
     const unreadBookContainer = document.querySelector('.unread-book-container');
     unreadBookContainer.innerHTML = '';
     const readedBookContainer = document.querySelector('.readed-book-container');
@@ -158,6 +175,7 @@ document.addEventListener('render', function(){
             readedBookContainer.appendChild(bookElement);
         }
     };
+    
 });
 
 // fungsi event delete dan change
